@@ -1,0 +1,46 @@
+# Yabai config
+# restart yabai
+# yabai --restart-service
+
+
+# layouts bsp (binary space partitioning), stack, float
+yabai -m config layout bsp
+
+
+# if in v split add second window to the right
+# if in h split add second window to the bottom
+yabai -m config window_placement second_child
+
+
+# padding between windows
+yabai -m config top_padding 40
+yabai -m config bottom_padding 40
+yabai -m config left_padding 40
+yabai -m config right_padding 40
+yabai -m config window_gap 40
+
+
+# mouse follows the keyboard focus
+yabai -m config mouse_follows_focus on
+
+# mouser modifier key
+yabai -m config mouse_modifier alt
+
+# left click + drag
+yabai -m config mouse_action1 move
+
+# right click + drag
+yabai -m config mouse_action2 resize
+
+# swap window if drug to the center of another window
+yabai -m config mouse_drop_action swap
+
+
+# applications for yabai to ignore
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+
+
+# give space at the top using sketchybar
+yabai -m config external_bar all:32:0
